@@ -1,9 +1,4 @@
 import sys
-#f = open(sys.argv[1], "r")
-#q = f.read().replace("\n", " ").split(" ")
-# n = int(q[0])
-# m = int(q[1])
-
 n = int(sys.argv[1])
 m = int(sys.argv[2])
 a=[]
