@@ -1,25 +1,24 @@
-f = open("1.txt", "r")
+import sys
+f = open(sys.argv[1], "r")
 q = f.read().replace("\n", " ").split(" ")
-x = int(q[0])
-y = int (q[1])
-r = int (q[2])
+x = float(q[0])
+y = float(q[1])
+r = float(q[2])
 f.close()
-ff = open("2.txt", "r")
+ff = open(sys.argv[2], "r")
 w = ff.read().replace("\n", " ").split(" ")
 i = 0
-print(w)
 a=[]
 b=[]
+f.close()
 for i in range(0,len(w)-1,2):
     a.append(int(w[i]))
     b.append(int(w[i+1]))
-    # b[i] = w[i]
-    print(w[i])
 f.close()
 for i in range(len(w)//2):
     if ((a[i]-x)**2+(b[i]-y)**2==r**2):
-        print('na granice')
+        print('0')
     elif ((a[i]-x)**2+(b[i]-y)**2>r**2):
-        print('za granicei')
+        print('2')
     else:
-        print('v krugu')
+        print('1')
